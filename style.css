@@ -1,0 +1,51 @@
+p {
+    color: red;
+    font-weight: bold;
+}
+
+div.burger {
+    background-image: url(images/burger.png);
+    height: 25px;
+    width: 25px;
+    background-size: cover;
+    display: none;
+}
+
+div.open {
+    background-image: url(images/close.png);
+}
+
+nav {
+    display: flex
+}
+
+nav li {
+    list-style-type: none;
+    margin: 0px 10px;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+/* On fait le responsive pour telephone */
+@media only screen and (max-width: 600px) {
+    p {
+        color: blue;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+
+    .open + nav {
+        display: block;
+    }
+
+    div.burger {
+        display:block
+    }
+}
